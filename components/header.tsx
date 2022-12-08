@@ -1,11 +1,12 @@
 import styles from '../styles/Header.module.css'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 const Header = () => {
     const [pageChosen, setPageChosen] = useState('Home');
 
     useEffect(() => {
-        const chosen = document.querySelectorAll('nav a')
+        const chosen = document.querySelectorAll('a')
         if (chosen) {
             chosen.forEach(page => {
                 page.classList.remove(styles.header_routes_active)
@@ -21,18 +22,18 @@ const Header = () => {
                 Mentorias
             </div>
             <nav className={styles.header_routes}>
-                <a  href='/#' id='Home'
+                <Link  href='/#' id='Home' className={styles.link}
                     onClick={() => setPageChosen('Home')}>
                     Home
-                </a>
-                <a  href='/#' id='Exp'
+                </Link>
+                <Link  href='/#' id='Exp' className={styles.link}
                     onClick={() => setPageChosen('Exp')}>
                     My experience
-                </a>
-                <a  href='/#' id='About'
+                </Link>
+                <Link  href='/#' id='About' className={styles.link}
                     onClick={() => setPageChosen('About')}>
                     About me
-                </a>
+                </Link>
             </nav>
         </div>
     )
