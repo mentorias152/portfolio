@@ -1,0 +1,115 @@
+.profile {
+    width: 100vw;
+    height: 60vh;
+    top: 0;
+    position: absolute;
+}
+
+.profile_background {
+    background:rgba(0, 0, 0, .4) url(../public/wallpaper.png);
+    background-size: cover;
+    background-blend-mode: darken;
+    width: 100%;
+    height: 87.5%;
+}
+
+.profile_greeting {
+    color: white;
+    height: 75%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile_greeting h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.profile_information {
+    height: 25%;
+    width: 100%;
+    top: calc(60vh*0.75);
+    position:absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 1rem 3rem 1rem 3rem;
+    border-bottom: 3px solid lightgray;
+}
+
+.profile_information_avatar {
+    padding: 0.1rem;
+    border-radius: 50%;
+    border: 3px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.avatar {
+    border-radius: 50%;
+}
+
+.profile_information_name {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    white-space: nowrap;
+    color: rgb(122, 122, 122);
+}
+
+.profile_information_name h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.profile_information_name p {
+    margin: 0;
+    padding: 0;
+}
+
+.profile_information_contact {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    color: rgb(122, 122, 122);
+}
+
+.profile_information_contact h3 {
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.profile_information_contact a {
+    margin: 1rem;
+}
+
+/*responsive*/
+
+@media screen and (max-width: 1000px) {
+    .profile_information {
+        padding: 1rem;
+    }
+    .profile_information_name {
+        padding: 1rem;
+    }
+
+    .profile_information_contact h3 {
+        display: none;
+    }
+}

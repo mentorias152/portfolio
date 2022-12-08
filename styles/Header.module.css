@@ -1,0 +1,45 @@
+.header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  padding: 0.5rem calc((100vw - 1000px) / 2);
+  color: white
+}
+
+.header_mentorias {
+  padding: 1rem;
+}
+
+.header_routes {
+  margin: 1rem;
+}
+
+.header_routes a {
+  margin: 0 2rem;
+}
+
+.header_routes a:hover {
+  color:lightgrey;
+}
+
+.header_routes_active {
+  color:rgb(231, 151, 53);
+}
+
+@media screen and (max-width: 768px) {
+  .header_routes {
+    display: none;
+  }
+  .header_mentorias {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
