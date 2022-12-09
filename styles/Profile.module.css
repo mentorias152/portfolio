@@ -38,6 +38,9 @@
 }
 
 .profile_information_avatar {
+    position: relative;
+    min-height: 150px;
+    min-width: 150px;
     padding: 0.1rem;
     border-radius: 50%;
     border: 3px solid lightgray;
@@ -108,7 +111,9 @@
     }
 
     .profile_information_avatar {
-        transform: translateY(-10%)
+        min-height: 100px;
+        min-width: 100px;
+        transform: translateY(-15%)
     }
 
     .profile_information_name {
@@ -116,7 +121,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transform: translateY(-35%)
+        transform: translateY(-30%)
     }
 
     .profile_information_contact {

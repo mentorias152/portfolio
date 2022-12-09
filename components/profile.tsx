@@ -20,8 +20,7 @@ const Profile = () => {
                         className={styles.avatar}
                         src={avatar}
                         alt='Avatar'
-                        height={150}
-                        width={150}
+                        fill
                     />
                 </div>
                 <div className={styles.profile_information_name}>
