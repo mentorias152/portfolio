@@ -6,8 +6,6 @@ import { SocialIcon } from 'react-social-icons'
 const Profile = () => {
     return (
         <div className={styles.profile}>
-            <div className={styles.profile_background}>
-            </div>
             <div className={styles.profile_greeting}>
                 <h1>
                     Welcome to my blog!

@@ -6,6 +6,19 @@ const Header = () => {
     const [pageChosen, setPageChosen] = useState('Home');
 
     useEffect(() => {
+        window.addEventListener('scroll', function () {
+            let header = document.querySelector('.' + styles.header);
+            if (header) {
+                if (window.scrollY > 0)
+                {
+                    header.classList.add(styles.header_active)
+                }
+                else
+                {
+                    header.classList.remove(styles.header_active)
+                }
+            }
+        })
         const chosen = document.querySelectorAll('a')
         if (chosen) {
             chosen.forEach(page => {
@@ -28,7 +41,7 @@ const Header = () => {
                 </Link>
                 <Link  href='/#' id='Exp' className={styles.link}
                     onClick={() => setPageChosen('Exp')}>
-                    My experience
+                    Experience
                 </Link>
                 <Link  href='/#' id='About' className={styles.link}
                     onClick={() => setPageChosen('About')}>
