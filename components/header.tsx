@@ -19,6 +19,7 @@ const Header = () => {
                 }
             }
         })
+        
         const chosen = document.querySelectorAll('a')
         if (chosen) {
             chosen.forEach(page => {
@@ -34,8 +35,8 @@ const Header = () => {
             <div className={styles.header_mentorias}>
                 Mentorias
             </div>
-            <nav className={styles.header_routes}>
-                <Link  href='/#' id='Home' className={styles.link}
+            <div className={styles.header_routes}>
+                <Link href='/#' id='Home' className={styles.link}
                     onClick={() => setPageChosen('Home')}>
                     Home
                 </Link>
@@ -47,7 +48,7 @@ const Header = () => {
                     onClick={() => setPageChosen('About')}>
                     About me
                 </Link>
-            </nav>
+            </div>
         </div>
     )
 }
