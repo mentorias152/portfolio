@@ -16,8 +16,6 @@
     background:rgba(0, 0, 0, .4) url(../public/wallpaper.png);
     background-size: cover;
     background-blend-mode: darken;
-    border-bottom-left-radius: 500%;
-    border-bottom-right-radius: 500%;
     z-index: 0;
 }
 
