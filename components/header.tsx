@@ -4,6 +4,9 @@ import Link from 'next/link'
 
 const Header = () => {
     const [pageChosen, setPageChosen] = useState('Home');
+    const [burgerClass, setBurgerClass] = useState(styles.header_menu_bar + ' ' + styles.header_menu_unclicked)
+    const [isMenuClicked, setIsMenuClicked] = useState(false);
+    const [menuListClass, setMenuListClass] = useState(styles.header_menu_list + ' ' + styles.hidden)
 
     useEffect(() => {
         window.addEventListener('scroll', function () {
@@ -28,7 +31,19 @@ const Header = () => {
                     page.classList.add(styles.header_routes_active)
             })
         }
-    })  
+    }) 
+
+    const handleClickMenu = () => {
+        if (isMenuClicked) {
+            setBurgerClass(styles.header_menu_bar + ' ' + styles.header_menu_clicked);
+            setMenuListClass(styles.header_menu_list + ' ' + styles.visible);
+        }
+        else {
+            setBurgerClass(styles.header_menu_bar + ' ' + styles.header_menu_unclicked);
+            setMenuListClass(styles.header_menu_list + ' ' + styles.hidden);
+        }
+        setIsMenuClicked(!isMenuClicked)
+    }
 
     return (
         <div className={styles.header}>
@@ -48,6 +63,11 @@ const Header = () => {
                     onClick={() => setPageChosen('About')}>
                     About me
                 </Link>
+            </div>
+            <div className={styles.header_menu} onClick={handleClickMenu}>
+                <div className={burgerClass}></div>
+                <div className={burgerClass}></div>
+                <div className={burgerClass}></div>
             </div>
         </div>
     )

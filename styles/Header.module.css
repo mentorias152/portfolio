@@ -29,6 +29,7 @@
   align-items: center;
   justify-content: center;
   padding-left: 2rem;
+  cursor: default;
 }
 
 .header_routes {
@@ -49,6 +50,24 @@
   color:rgb(231, 151, 53);
 }
 
+.header_menu {
+  width: 2em;
+  height: 100%;
+  padding: 1.2rem 0 1.2rem 0;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  display: none;
+}
+
+.header_menu_bar {
+  height: 0.1em;
+  width: 100%;
+  background-color: white;
+}
+
 @media screen and (max-width: 768px) {
   .header_routes {
     display: none;
@@ -58,5 +77,46 @@
     display: flex;
     justify-content: center;
     padding: 0;
+    transform: translateX(calc(1rem + 1em));
   }
+  .header_menu {
+    display: inherit;
+    cursor: pointer;
+    z-index: 100;
+  }
+}
+
+/* visible and hidden */
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inherit;
+}
+
+/* animation for burger menu */
+
+.header_menu_bar.header_menu_clicked:nth-child(1) {
+  transform: translateY(calc(5vh - 1.8rem)) rotate(45deg);
+  transition: ease-out 0.5s;
+  height: 0.2rem;
+}
+
+.header_menu_bar.header_menu_clicked:nth-child(2) {
+  transform: rotate(45deg);
+  transition: ease-out 0.5s
+}
+
+.header_menu_bar.header_menu_clicked:nth-child(3) {
+  transform: translateY(calc(-5vh + 1.8rem)) rotate(135deg);
+  transition: ease-out 0.5s;
+  height: 0.2rem;
+}
+
+.header_menu_bar.header_menu_unclicked {
+  transform: translate(0) rotate(0);
+  transition:cubic-bezier(1, 0, 0, 1) 0.5s;
+  height: 0.1rem;
 }
