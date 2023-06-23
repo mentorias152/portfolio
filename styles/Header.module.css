@@ -30,6 +30,7 @@
   justify-content: center;
   padding-left: 2rem;
   cursor: default;
+  font-size: large;
 }
 
 .header_routes {
@@ -99,7 +100,7 @@
 /* animation for burger menu */
 
 .header_menu_bar.header_menu_clicked:nth-child(1) {
-  transform: translateY(calc(5vh - 1.8rem)) rotate(45deg);
+  transform: translateY(calc(5vh - 1.8rem)) rotate(225deg);
   transition: ease-out 0.5s;
   height: 0.2rem;
 }
@@ -110,7 +111,7 @@
 }
 
 .header_menu_bar.header_menu_clicked:nth-child(3) {
-  transform: translateY(calc(-5vh + 1.8rem)) rotate(135deg);
+  transform: translateY(calc(-5vh + 1.8rem)) rotate(315deg);
   transition: ease-out 0.5s;
   height: 0.2rem;
 }

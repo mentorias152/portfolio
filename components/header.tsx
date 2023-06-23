@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Header = () => {
     const [pageChosen, setPageChosen] = useState('Home');
     const [burgerClass, setBurgerClass] = useState(styles.header_menu_bar + ' ' + styles.header_menu_unclicked)
-    const [isMenuClicked, setIsMenuClicked] = useState(false);
+    const [isMenuClicked, setIsMenuClicked] = useState(true);
     const [menuListClass, setMenuListClass] = useState(styles.header_menu_list + ' ' + styles.hidden)
 
     useEffect(() => {
