@@ -12,17 +12,15 @@ const Header = () => {
         window.addEventListener('scroll', function () {
             let header = document.querySelector('.' + styles.header);
             if (header) {
-                if (window.scrollY > 0)
-                {
+                if (window.scrollY > 0) {
                     header.classList.add(styles.header_active)
                 }
-                else
-                {
+                else {
                     header.classList.remove(styles.header_active)
                 }
             }
         })
-        
+
         const chosen = document.querySelectorAll('a')
         if (chosen) {
             chosen.forEach(page => {
@@ -31,9 +29,10 @@ const Header = () => {
                     page.classList.add(styles.header_routes_active)
             })
         }
-    }) 
+    })
 
     const handleClickMenu = () => {
+        console.log(isMenuClicked)
         if (isMenuClicked) {
             setBurgerClass(styles.header_menu_bar + ' ' + styles.header_menu_clicked);
             setMenuListClass(styles.header_menu_list + ' ' + styles.visible);
@@ -43,10 +42,16 @@ const Header = () => {
             setMenuListClass(styles.header_menu_list + ' ' + styles.hidden);
         }
         setIsMenuClicked(!isMenuClicked)
+        console.log(isMenuClicked)
     }
 
     return (
         <div className={styles.header}>
+            <div className={styles.header_menu} onClick={handleClickMenu}>
+                <span className={burgerClass}></span>
+                <span className={burgerClass}></span>
+                <span className={burgerClass}></span>
+            </div>
             <div className={styles.header_mentorias}>
                 Mentorias
             </div>
@@ -55,19 +60,25 @@ const Header = () => {
                     onClick={() => setPageChosen('Home')}>
                     Home
                 </Link>
-                <Link  href='/#' id='Exp' className={styles.link}
+                <Link href='/#' id='Exp' className={styles.link}
                     onClick={() => setPageChosen('Exp')}>
                     Experience
                 </Link>
-                <Link  href='/#' id='About' className={styles.link}
+                <Link href='/#' id='About' className={styles.link}
                     onClick={() => setPageChosen('About')}>
                     About me
                 </Link>
             </div>
-            <div className={styles.header_menu} onClick={handleClickMenu}>
-                <div className={burgerClass}></div>
-                <div className={burgerClass}></div>
-                <div className={burgerClass}></div>
+            <div className={menuListClass}>
+            <Link href='/#' id='Home' className={styles.header_menu_list_link}>
+                    Home
+                </Link>
+                <Link href='/#' id='Exp' className={styles.header_menu_list_link}>
+                    Experience
+                </Link>
+                <Link href='/#' id='About' className={styles.header_menu_list_link}>
+                    About me
+                </Link>
             </div>
         </div>
     )

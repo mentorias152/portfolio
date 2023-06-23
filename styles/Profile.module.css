@@ -13,12 +13,11 @@
     position: absolute;
     width: 150%;
     height: 60vh;
-    background:rgba(0, 0, 0, .4) url(../public/wallpaper.png);
+    background-color: black;
     background-size: cover;
     background-blend-mode: darken;
     z-index: 0;
 }
-
 
 .profile {
     width: 100%;
