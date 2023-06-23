@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Randrake;
+  src: url(../public/randrake-font-script/Randrake.otf) format("opentype");
+}
+
 .header {
   width: 100%;
   height: 10vh;
@@ -9,7 +14,7 @@
   position: fixed;
   top: 0;
   margin: 0;
-  padding: 0.5rem calc((100vw - 1300px) / 2);
+  padding: 0.5rem 0.5rem;
   color: white;
     -webkit-transition: background-color 0.2s ease-out;
     -moz-transition:    background-color 0.2s ease-out;
@@ -23,6 +28,7 @@
 }
 
 .header_mentorias {
+  font-family: Randrake;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -30,7 +36,8 @@
   justify-content: center;
   padding-left: 2rem;
   cursor: default;
-  font-size: larger;
+  font-size: xx-large;
+  color:rgb(231, 151, 53);
 }
 
 .header_routes {
@@ -61,6 +68,7 @@
   justify-content: space-between;
   align-items: flex-start;
   display: none;
+  background-color: white;
 }
 
 .header_menu_bar {
@@ -96,12 +104,11 @@
   width: 30vw;
   height: auto;
   position: absolute;
-  background-color: black;
+  background-color:rgba(231, 151, 53, 0.9);
   top: 0;
   left: 0;
   z-index: 2;
   transform: translateX(-100%);
-  display: hidden;
   padding-top: 10vh;
 }
 
@@ -123,7 +130,7 @@
     display: flex;
     justify-content: center;
     padding: 0;
-    transform: translateX(calc(-1rem - 1em));
+    transform: translateX(calc(0 - 2.2rem - 2em));
   }
 
   .header_menu {
