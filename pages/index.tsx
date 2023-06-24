@@ -1,24 +1,21 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-import Header from '../components/header'
-import Profile from '../components/profile'
-import Blog from '../components/blog'
+import {Box, Container, Heading} from '@chakra-ui/react'
 
 export default function Home() {
 
   return (
-    <div className={styles.container}>
+    <Container>
       <Head>
         <title>Mentorias</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <Header />
-        <Profile />
-        <Blog />
-      </main>
-    </div>
+      <Box borderRadius='lg' bg='red' p={3} mb={6} alignItems='center'>
+        Hello, I&apos;m a Front-end developer
+      </Box>
+      <Box></Box>
+    </Container>
 
   )
 }
